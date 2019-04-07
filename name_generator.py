@@ -3,11 +3,11 @@
 import urllib.request
 import random
 
-word_file = r"C:\Users\jonathan.routley\Documents\Code\Python\Not Work\words.txt"
+word_file = "words.txt"
 words = open(word_file).read().splitlines()
-countries_file = r"C:\Users\jonathan.routley\Documents\Code\Python\Not Work\countries.txt"
+countries_file = "countries.txt"
 countries = open(countries_file).read().splitlines()
-adjectives_file = r"C:\Users\jonathan.routley\Documents\Code\Python\Not Work\adjectives.txt"
+adjectives_file = "adjectives.txt"
 adjectives = str(open(adjectives_file).read()).split(u'Â\xa0')
 adjectives = [item.strip() for item in adjectives]
 comparatives = []
@@ -22,7 +22,7 @@ for i in range(len(adjectives)):
     counter1 += 1
     counter2 += 1
 
-body_parts_file = r"C:\Users\jonathan.routley\Documents\Code\Python\Not Work\anatomy.txt"
+body_parts_file = "anatomy.txt"
 body_parts = open(body_parts_file).read().splitlines()
 
 
