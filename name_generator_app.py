@@ -105,5 +105,5 @@ def main():
             else:
                 print("Please enter either 'y' or 'n'")
 
-print(main())
+main()
     
