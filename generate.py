@@ -68,8 +68,6 @@ name_words  = [word for word in upper_words if not word.isupper()]
 
 def main():
     flag = True
-    print("Welcome to the Stupid Hair Product Name Generator v0.2!")
-    print("Looking for a new hair product? You should use: ")
     while flag == True:
         switch = random.randint(1,6)
         one_name = ' '.join([name_words[random.randint(0, len(name_words))] for i in range(2)])
