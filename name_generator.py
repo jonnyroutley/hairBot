@@ -1,6 +1,4 @@
 # Make a dumb hair product name generator 
-
-import urllib.request
 import random
 
 word_file = "words.txt"
@@ -25,17 +23,9 @@ for i in range(len(adjectives)):
 body_parts_file = "anatomy.txt"
 body_parts = open(body_parts_file).read().splitlines()
 
+# print(words, countries, adjectives, comparatives, superlatives, body_parts)
 
-# word_url = "http://svnweb.freebsd.org/csrg/share/dict/words?view=co&content-type=text/plain"
-    # response = urllib.request.urlopen(word_url)
-    # long_txt = response.read().decode()
-    # words = long_txt.splitlines()
-
-    # print(response)
-    # print(long_txt)
-    # print(len(words))
-
-firstnames = ('Baby Oil', 'Bad News', 'Big Burps', "Bill 'Beenie-Weenie'",
+firstnames = ('Baby Oil', 'Bad News', 'Big Bird', 'Big Burps', "Bill 'Beenie-Weenie'",
      "Bob 'Stinkbug'", 'Bowel Noises', 'Boxelder', 'Bruiser', "Bud 'Lite' ",
      'Butterbean', 'Buttermilk', 'Buttocks', 'Chad', 'Chesterfield',
      'Chewy', 'Chigger', 'Cinnabuns', 'Cleet', 'Cornbread', 'Crab Meat',
@@ -66,25 +56,14 @@ lastnames = ('Appleyard', 'Bigmeat', 'Bloominshine', 'Boogerbottom',
     'Weiners', 'Whipkey', 'Wigglesworth', 'Wimplesnatch', 'Winterkorn',
     'Woolysocks')
 
-standard_product_names = ['Mousse', 'Gel', 'Pomade', 'Clay', 'Wax', 'Paste', 'Cream', 'Putty', 'Hair Spray']
-other_product_names = ['Olive Oil', 'Cocoa Butter', 'Mixed Herb Butter', 'Lard', 'Peanut Oil', 'Chicken Fat', 'Mayonnaise', 'Lotion', 'Gunk', '']
-#herb butter type thing might be fun
-#how much hold and how much shine
+standard_product_names = ['Mousse', 'Gel', 'Pomade', 'Clay', 'Wax', 'Paste', 'Cream', 'Putty', 'Hair Spray', 'Shampoo', 'Conditioner']
+other_product_names = ['Olive Oil', 'Cocoa Butter', 'Mixed Herb Butter', 'Lard', 'Peanut Oil', 'Chicken Fat', 'Mayonnaise', 'Lotion', 'Gunk', 'Special Sauce']
+
 
 effects = ['Hair', 'Hold', 'Shine', 'Gloss', 'Texture', 'Look', 'Appearance', 'Scalp', 'Dandruff', 'Follicles', 'Split Ends', 'Sheen', 'Musk', 'Smell']
 
 upper_words = [word for word in words if word[0].isupper()]
 name_words  = [word for word in upper_words if not word.isupper()]
-
-
-"""
-Options: 
-- [Very Funny Name]'s [regular hair product]
-- [Normal Name]'s [bad hair product]
-- New! [regular hair product] for [weird effect] 
-- special combo of all the weirds
-- [] + [country]'s 'superlative'!
-"""
 
 
 def main():
@@ -103,7 +82,7 @@ def main():
             print(one_name+ "'s " + random.choice(other_product_names))
 
         if switch == 3:
-            print("New! " + random.choice(standard_product_names+other_product_names) + " for " + random.choice(comparatives).capitalize()+ " " +random.choice(effects))
+            print("New Hair Product Alert! " + random.choice(standard_product_names+other_product_names) + " for " + random.choice(comparatives).capitalize()+ " " +random.choice(effects))
 
         if switch == 4:
             print('"'+ one_name +" " + random.choice(standard_product_names) + '"' + ": " + random.choice(countries)+"'s " + random.choice(superlatives).capitalize() )
