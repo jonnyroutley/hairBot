@@ -1,4 +1,5 @@
 # Make a dumb hair product name generator 
+# coding=utf-8
 import random
 
 word_file = "words.txt"
