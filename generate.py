@@ -91,6 +91,5 @@ def main():
         if switch == 6:
             return(one_name+ "'s " + random.choice(other_product_names) + ". Side Effects may include: " + random.choice(comparatives).capitalize() +" " +random.choice(body_parts).capitalize())
         
-for i in range(20):
-    print(main())
+print(main())
     
